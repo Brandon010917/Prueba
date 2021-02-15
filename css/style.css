@@ -1,0 +1,177 @@
+:root {
+  --color-cyan: hsl(179, 62%, 43%);
+  --color-bright-yellow: hsl(71, 73%, 54%);
+  --color-light-gray: hsl(204, 43%, 93%);
+  --color-grayish-blue: hsl(218, 22%, 67%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+body {
+  background-color: var(--color-light-gray);
+  padding: 4rem 2rem;
+  font-family: Karla, sans-serif;
+  font-size: 1rem;
+}
+
+@media (min-width: 920px) {
+  body {
+    font-size: 1.2rem;
+  }
+}
+
+.section {
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+@media screen and (min-width: 920px) {
+  .section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .box--column-2 {
+    grid-column: 1 / -1;
+  }
+}
+
+.box {
+  padding: 1.5rem;
+}
+
+@media screen and (min-width: 920px) {
+  .box {
+    padding: 2rem;
+  }
+}
+
+.box--text-white {
+  color: #fff;
+}
+
+.box__title {
+  margin-bottom: 1.5rem;
+}
+
+.box__title--font-light {
+  font-weight: 400;
+}
+
+.box__title--cyan {
+  color: var(--color-cyan);
+}
+
+.box__spam {
+  color: var(--color-bright-yellow);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.box__text {
+  color: var(--color-grayish-blue);
+}
+
+.box__text,
+.box__list-item {
+  font-size: .9rem;
+  line-height: 1.5rem;;
+}
+
+@media (min-width: 920px) {
+  .box__text,
+  .box__list-item {
+    font-size: 1rem;
+  }
+}
+
+.box__list-item {
+  color: var(--color-light-gray);
+}
+
+.box--white {
+  background-color: #fff;
+}
+
+.box--cyan {
+  background-color: var(--color-cyan);
+}
+
+.box--cyan-opacity {
+  background-color: hsla(179, 62%, 43%, 0.75);
+}
+
+.box__subscription {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.box__dollar,
+.box__amount {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.box__recurrence {
+  margin-left: .75rem;
+  color: var(--color-light-gray);
+}
+
+.box__promotion {
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 920px) {
+  .box__promotion {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.btn {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  font-size: 1rem;
+}
+
+@media (min-width: 920px) {
+  .btn {
+    font-size: 1.2rem;
+  }
+}
+
+.btn--bright-yellow {
+  background-color: var(--color-bright-yellow);
+}
